@@ -1,0 +1,12 @@
+Leet code 2
+
+class Solution:
+    def findGCD(self, nums):
+        def gcd(a, b):
+            while b:
+                a, b = b, a % b
+            return a
+        
+        smallest = min(nums)
+        largest = max(nums)
+        return gcd(smallest, largest)
